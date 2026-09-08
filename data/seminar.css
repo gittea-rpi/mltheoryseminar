@@ -1,0 +1,71 @@
+:root {
+  --maxw: 900px;
+  --border: #ddd;
+  --ink: #111;
+  --muted: #666;
+  --accent: #0645AD;
+  --soft: #f7f7f7;
+  --card: #fafafa;
+}
+
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.55;
+  background: #fff;
+}
+
+main { display: block; }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
+header { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
+h1, h2, h3 { line-height: 1.25; margin: 1.2rem 0 0.5rem; }
+h1 { margin-top: 1rem; }
+p { margin: 0.75rem 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+ul, ol { margin: 0.5rem 0 1rem 1.25rem; }
+li { margin: 0.25rem 0; }
+strong { font-weight: 600; }
+code, tt, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+pre { background: var(--card); border: 1px solid #eee; padding: 0.75rem; overflow: auto; }
+.subtle { color: var(--muted); }
+.top-nav { font-size: 0.95rem; margin-top: 0.6rem; border-top: 1px solid #eee; padding-top: 0.5rem; color: var(--muted); }
+.top-nav a { color: var(--ink); padding: 0.3em 0.65em; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+.top-nav a:hover, .top-nav a:focus { background: #e6f1fb; color: #185fa5; text-decoration: none; }
+.page-title-row { display: flex; align-items: center; gap: 1rem; }
+.header-logo { height: 5rem; flex-shrink: 0; }
+.header-title-text { display: flex; flex-direction: column; }
+.header-title-text h1 { margin: 0; }
+.section-title { font-size: 1.15rem; font-weight: 600; margin-top: 1.4rem; }
+.talk-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.talk-table th, .talk-table td { border: 1px solid var(--border); padding: 0.6rem; vertical-align: top; }
+.talk-table th { background: var(--soft); text-align: left; }
+.talk-table tbody tr:nth-child(odd) { background-color: #fdfdfd; }
+.talk-table tbody tr:nth-child(even) { background-color: #f5f5f5; }
+.talk-card { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; overflow: hidden; background: #fff; }
+.talk-summary { padding: 10px 14px; cursor: pointer; user-select: none; background: transparent; }
+.talk-summary:hover { background: #fafafa; }
+.talk-summary::-webkit-details-marker { display: none; }
+.talk-headline { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+.talk-date { color: var(--muted); font-size: 0.9rem; font-weight: 600; min-width: 90px; }
+.talk-speaker { font-weight: 600; }
+.talk-format { color: var(--muted); font-size: 0.92rem; }
+.talk-body { border-top: 1px solid var(--border); padding: 0 14px 12px; }
+.talk-abstract { margin: 10px 0; }
+.talk-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 0.4rem; }
+.talk-links a { font-size: 0.82rem; padding: 3px 12px; border-radius: 4px; text-decoration: none; }
+.talk-link-primary { background: #e6f1fb; color: #185fa5; }
+.talk-link-secondary { background: #f1efe8; color: #5f5e5a; }
+.talk-link-extra { background: #eaf3de; color: #3b6d11; }
+.semester-jumpbar { position: sticky; top: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(4px); padding: 0.4rem 0 0.6rem; border-bottom: 1px solid #eee; z-index: 10; }
+.semester-jumpbar a { display: inline-block; margin: 0.15rem 0.35rem 0.15rem 0; }
+.semester-block { margin-top: 1.6rem; }
+.semester-heading { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 1px solid #eee; }
+.main-lead { margin-top: 0.5rem; }
+.key-facts { display: grid; grid-template-columns: 1fr; gap: 0.2rem; margin: 1rem 0 0.8rem; }
+.key-facts strong { display: inline-block; min-width: 90px; }
+
+@media (min-width: 760px) {
+  .key-facts { grid-template-columns: 1fr 1fr; }
+}

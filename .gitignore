@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Common editor cruft
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated site output
+website/

@@ -1,0 +1,196 @@
+{
+  "site": {
+    "title": "ML + Theory Seminar",
+    "organization": "Rensselaer Polytechnic Institute",
+    "contact": "gittea@rpi.edu",
+    "day_time": "Wednesdays, 11:00 AM – 11:50 PM",
+    "location": "Sage 3713",
+    "audience": "Anyone with an interest in ML and CS Theory"
+  },
+  "talks": [
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-02-04",
+      "speaker": "Christopher Okonkwo",
+      "title": "Machine Unlearning for Large Language Models: Concepts, Methods, and Challenges",
+      "format": "literature survey",
+      "abstract": "Large language models (LLMs) trained on massive, heterogeneous corpora inevitably absorb sensitive, copyrighted, or hazardous information, raising critical concerns around privacy, safety, and regulatory compliance. Machine unlearning aims to selectively remove such knowledge from trained models while preserving overall utility, yet remains theoretically underdeveloped and empirically fragile. This talk presents a structured study of machine unlearning for LLMs, introducing a formal problem setup and a unifying taxonomy that organizes existing approaches by their intervention layer: weight-space optimization methods, representation-level and localized edits, logit-space and output-distribution manipulation, and causal or distributional alignment frameworks. We analyze how these methods instantiate forget-retain objectives, and the degree to which they achieve approximate versus retraining-equivalent unlearning. Through an empirical synthesis of results across widely used benchmarks (e.g., TOFU, WMDP, PKU-SafeRLHF, and copyright datasets), we show that many reported gains rely on narrow behavioral proxies that fail to capture true knowledge removal.",
+      "short_abstract": "A structured survey of machine unlearning for LLMs, with a taxonomy of intervention layers and a critique of common evaluation proxies.",
+      "links": []
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-02-11",
+      "speaker": "Thomas Waite",
+      "title": "Statistical-Symbolic Verification of Perception-Based Autonomous Systems using State-Dependent Conformal Prediction",
+      "format": "paper talk, NeuS 2025",
+      "abstract": "Reachability analysis is a standard tool for providing safety guarantees for neurally controlled autonomous systems, but its direct application to neural perception components is infeasible due to imperfect or intractable perception models. A common workaround is to combine symbolic reachability with statistical bounds on perception error, for example via conformal prediction (CP). However, existing CP methods for time-series data often produce conservative error bounds, and the resulting accumulation of uncertainty over time makes it difficult to integrate statistical guarantees with reachability analysis in a provable, scalable, and minimally conservative way. This talk introduces state-dependent conformal prediction, based on the key observation that perception error varies significantly with the system’s dynamical state. We exploit this dependency to construct tighter high-confidence error bounds by partitioning the state space using a genetic algorithm that optimizes conformal tightness. Incorporating these bounds into reachability analysis induces additional branching and uncertainty, so we further propose a branch-merging reachability algorithm that trades controlled uncertainty for scalability. Empirical results on two complementary case studies demonstrate substantially reduced conservatism compared to existing verification approaches.",
+      "short_abstract": "Combines state-dependent conformal prediction with symbolic reachability to reduce conservatism in safety verification for perception-based autonomous systems.",
+      "links": [{"label": "Paper", "url": "https://www.cs.rpi.edu/~ivanor/cpub/neus25-waite.pdf"}]
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-02-18",
+      "speaker": "Prof. Chen Wang",
+      "title": "Adversarial Online Learning with Limited Feedback and Memory",
+      "format": "paper talk, SODA 2026",
+      "abstract": "While classical MWU and EXP3 algorithms for online learning and adversarial bandits achieve sqrt(T) poly(n) regret, they require O(n log T) space to implement, which is inefficient for modern large-scale applications. Recent work by Srinivas et al. (STOC 2022), Peng and Zhang (SODA 2023), and Peng and Rubinstein (FOCS 2023) established polylogarithmic-memory algorithms for the full-feedback setting (q = n, where q is the number of experts/bandits queried at each step), but the limited-feedback case (q < n) remained open. This talk presents the first algorithms achieving o(T) regret with o(n) memory for q < n, using only polylog(nT) memory. The results include: (i) a T^(2/3) regret bound for the q = 1 bandit case, improvable to the optimal sqrt(nT) under random-order losses; (ii) a near-optimal sqrt(nT) regret bound for q = 2; and (iii) extensions to interval regret and sliding-window models. The main techniques use estimated bandit losses for pool management and a separation of exploration and exploitation to remove dependency for boosting. These techniques may be of independent interest.",
+      "short_abstract": "New memory-efficient adversarial online learning algorithms for limited-feedback settings, with regret bounds near the best possible rates.",
+      "links": [{"label": "Paper", "url": "https://www.arxiv.org/abs/2601.03533"}]
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-03-11",
+      "speaker": "Deniz Koyuncu",
+      "title": "Misleading without Lying: Adversarial Missingness Attacks",
+      "format": "paper talk, AAAI 2026+",
+      "abstract": "Machine learning models frequently operate on datasets with missing entries, often struggling with the inherent bias this introduces. While missing data is traditionally attributed to benign collection errors, the rise of multi-source, unvetted datasets introduces a new threat: adversarial missingness. In this talk, I will define this class of attacks and discuss the theoretical feasibility of missing data attacks on causal structure learning. I will then demonstrate how to design finite-data efficient attacks by framing the challenge as a bi-level optimization problem. Finally, I will showcase how this formulation enables successful attacks, proving that causal structure learning, generalized linear models, and causal inference frameworks are all significantly susceptible to strategically engineered missingness.",
+      "short_abstract": "A study of adversarial missingness attacks showing that missing-data manipulation can significantly weaken causal and statistical learning systems.",
+      "links": [
+        {"label": "KDD 2023", "url": "https://doi.org/10.1145/3580305.3599297"},
+        {"label": "ACM Trans. Intell. Syst. Technol. 2024", "url": "https://doi.org/10.1145/3682065"},
+        {"label": "AAAI 2026", "url": "https://arxiv.org/abs/2409.04407"}
+      ]
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-03-18",
+      "speaker": "Sadia Asif",
+      "title": "Optimization-driven Framework for Machine Unlearning",
+      "format": "paper talk, ICLR 2026",
+      "abstract": "Large language models deployed in sensitive applications increasingly require the ability to unlearn specific knowledge, such as user requests, copyrighted materials, or outdated information, without retraining from scratch to ensure regulatory compliance, user privacy, and safety. This task, known as machine unlearning, aims to remove the influence of targeted data (forgetting) while maintaining performance on the remaining data (retention). A common approach is to formulate this as a multi-objective problem and reduce it to a single-objective problem via scalarization, where forgetting and retention losses are combined using a weighted sum. However, this often results in unstable training dynamics and degraded model utility due to conflicting gradient directions. To address these challenges, we propose OFMU, a penalty-based bi-level optimization framework that explicitly prioritizes forgetting while preserving retention through a hierarchical structure. Our method enforces forgetting via an inner maximization step that incorporates a similarity-aware penalty to decorrelate the gradients of the forget and retention objectives and restores utility through an outer minimization step. To ensure scalability, we develop a two-loop algorithm with provable convergence guarantees under both convex and non-convex regimes. We further provide a rigorous theoretical analysis of convergence rates and show that our approach achieves better trade-offs between forgetting efficacy and model utility compared to prior methods.",
+      "short_abstract": "A bi-level optimization framework for machine unlearning that improves the forgetting-retention tradeoff and comes with convergence guarantees.",
+      "links": [{"label": "Paper", "url": "https://openreview.net/forum?id=ZDuyNJI56H"}]
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-04-15",
+      "speaker": "Hoai-an Nguyen",
+      "title": "Numerical Linear Algebra in Linear Space",
+      "format": "paper talk, SODA 2026",
+      "abstract": "We present a randomized linear-space solver for general linear systems Ax = b where A and b are over the integers and without any assumption on the condition number of A. For matrices whose entries are bounded by poly(n), the solver returns a (1+epsilon)-multiplicative entry-wise approximation to rational vector x using O~(n^2 · nnz(A)) bit operations and O(n log n) bits of working space, where nnz denotes the number of nonzero entries. To our knowledge, this is the first linear-space linear system solver over the rationals that runs in O~(n^2 · nnz(A)) time. We also present several applications of our solver to numerical linear algebra problems, for which we provide algorithms with efficient polynomial running time and near-linear space. In particular, we present results for linear regression, linear programming, eigenvalues and eigenvectors, and singular value decomposition.",
+      "short_abstract": "A randomized linear-space solver for integer linear systems, with applications to regression, LP, and spectral problems.",
+      "links": [{"label": "Paper", "url": "https://arxiv.org/abs/2507.02433"}]
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-04-22",
+      "speaker": "Khai Dong",
+      "title": "Label Complexity of Linear Regression",
+      "format": "RQE talk",
+      "abstract": "Given a known system matrix X with n rows corresponding to experiments whose outputs y are costly to obtain, how can we selectively pay to observe only a fraction of the entries of y despite making no assumptions about y while ensuring that the resulting estimator incurs only a small multiplicative increase in error? This RQE talk will survey algorithms and guarantees for doing this efficiently in the worst case over y.",
+      "short_abstract": "A survey of label-efficient linear regression methods that minimize the number of expensive observations needed for a good estimator.",
+      "links": []
+    },
+    {
+      "semester": "Fall 2026",
+      "semester_slug": "fall-2026",
+      "date": "2026-04-29",
+      "speaker": "Xingjian Zhao",
+      "title": "WIN-U: Woodbury-Informed Newton-Unlearning as a retain-free Machine Unlearning Framework",
+      "format": "paper in submission",
+      "abstract": "Privacy concerns in LLMs have led to the rapidly growing need to enforce a data’s right to be forgotten. Machine unlearning addresses precisely this task, namely the removal of the influence of some specific data, i.e., the forget set, from a trained model. The gold standard for unlearning is to produce the model that would have been learned on only the rest of the training data, i.e., the retain set. Most existing unlearning methods rely on direct access to the retained data, which may not be practical due to privacy or cost constraints. We propose WIN-U, a retained-data free unlearning framework that requires only second order information for the originally trained model on the full data. The unlearning is performed using a single Newton-style step. Using the Woodbury matrix identity and a generalized Gauss-Newton approximation for the forget set curvature, the WIN-U update recovers the closed-form linear solution and serves as a local second-order approximation to the gold-standard retraining optimum. Extensive experiments on various vision and language benchmarks demonstrate that WIN-U achieves SOTA performance in terms of unlearning efficacy and utility preservation, while being more robust against relearning attacks compared to existing methods. Importantly, WIN-U does not require access to the retained data.",
+      "short_abstract": "A retain-free machine unlearning framework using a single Newton-style step and second-order information.",
+      "links": [{"label": "Preprint", "url": "https://arxiv.org/abs/2604.13438"}]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-02-04",
+      "speaker": "Christopher Okonkwo",
+      "title": "Machine Unlearning for Large Language Models: Concepts, Methods, and Challenges",
+      "format": "literature survey",
+      "abstract": "Large language models (LLMs) trained on massive, heterogeneous corpora inevitably absorb sensitive, copyrighted, or hazardous information, raising critical concerns around privacy, safety, and regulatory compliance. Machine unlearning aims to selectively remove such knowledge from trained models while preserving overall utility, yet remains theoretically underdeveloped and empirically fragile. This talk presents a structured study of machine unlearning for LLMs, introducing a formal problem setup and a unifying taxonomy that organizes existing approaches by their intervention layer: weight-space optimization methods, representation-level and localized edits, logit-space and output-distribution manipulation, and causal or distributional alignment frameworks. We analyze how these methods instantiate forget-retain objectives, and the degree to which they achieve approximate versus retraining-equivalent unlearning. Through an empirical synthesis of results across widely used benchmarks (e.g., TOFU, WMDP, PKU-SafeRLHF, and copyright datasets), we show that many reported gains rely on narrow behavioral proxies that fail to capture true knowledge removal.",
+      "short_abstract": "A structured survey of machine unlearning for LLMs, with a taxonomy of intervention layers and a critique of common evaluation proxies.",
+      "links": []
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-02-11",
+      "speaker": "Thomas Waite",
+      "title": "Statistical-Symbolic Verification of Perception-Based Autonomous Systems using State-Dependent Conformal Prediction",
+      "format": "paper talk, NeuS 2025",
+      "abstract": "Reachability analysis is a standard tool for providing safety guarantees for neurally controlled autonomous systems, but its direct application to neural perception components is infeasible due to imperfect or intractable perception models. A common workaround is to combine symbolic reachability with statistical bounds on perception error, for example via conformal prediction (CP). However, existing CP methods for time-series data often produce conservative error bounds, and the resulting accumulation of uncertainty over time makes it difficult to integrate statistical guarantees with reachability analysis in a provable, scalable, and minimally conservative way. This talk introduces state-dependent conformal prediction, based on the key observation that perception error varies significantly with the system’s dynamical state. We exploit this dependency to construct tighter high-confidence error bounds by partitioning the state space using a genetic algorithm that optimizes conformal tightness. Incorporating these bounds into reachability analysis induces additional branching and uncertainty, so we further propose a branch-merging reachability algorithm that trades controlled uncertainty for scalability. Empirical results on two complementary case studies demonstrate substantially reduced conservatism compared to existing verification approaches.",
+      "short_abstract": "Combines state-dependent conformal prediction with symbolic reachability to reduce conservatism in safety verification for perception-based autonomous systems.",
+      "links": [{"label": "Paper", "url": "https://www.cs.rpi.edu/~ivanor/cpub/neus25-waite.pdf"}]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-02-18",
+      "speaker": "Prof. Chen Wang",
+      "title": "Adversarial Online Learning with Limited Feedback and Memory",
+      "format": "paper talk, SODA 2026",
+      "abstract": "While classical MWU and EXP3 algorithms for online learning and adversarial bandits achieve sqrt(T) poly(n) regret, they require O(n log T) space to implement, which is inefficient for modern large-scale applications. Recent work by Srinivas et al. (STOC 2022), Peng and Zhang (SODA 2023), and Peng and Rubinstein (FOCS 2023) established polylogarithmic-memory algorithms for the full-feedback setting (q = n, where q is the number of experts/bandits queried at each step), but the limited-feedback case (q < n) remained open. This talk presents the first algorithms achieving o(T) regret with o(n) memory for q < n, using only polylog(nT) memory. The results include: (i) a T^(2/3) regret bound for the q = 1 bandit case, improvable to the optimal sqrt(nT) under random-order losses; (ii) a near-optimal sqrt(nT) regret bound for q = 2; and (iii) extensions to interval regret and sliding-window models. The main techniques use estimated bandit losses for pool management and a separation of exploration and exploitation to remove dependency for boosting. These techniques may be of independent interest.",
+      "short_abstract": "New memory-efficient adversarial online learning algorithms for limited-feedback settings, with regret bounds near the best possible rates.",
+      "links": [{"label": "Paper", "url": "https://www.arxiv.org/abs/2601.03533"}]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-03-11",
+      "speaker": "Deniz Koyuncu",
+      "title": "Misleading without Lying: Adversarial Missingness Attacks",
+      "format": "paper talk, AAAI 2026+",
+      "abstract": "Machine learning models frequently operate on datasets with missing entries, often struggling with the inherent bias this introduces. While missing data is traditionally attributed to benign collection errors, the rise of multi-source, unvetted datasets introduces a new threat: adversarial missingness. In this talk, I will define this class of attacks and discuss the theoretical feasibility of missing data attacks on causal structure learning. I will then demonstrate how to design finite-data efficient attacks by framing the challenge as a bi-level optimization problem. Finally, I will showcase how this formulation enables successful attacks, proving that causal structure learning, generalized linear models, and causal inference frameworks are all significantly susceptible to strategically engineered missingness.",
+      "short_abstract": "A study of adversarial missingness attacks showing that missing-data manipulation can significantly weaken causal and statistical learning systems.",
+      "links": [
+        {"label": "KDD 2023", "url": "https://doi.org/10.1145/3580305.3599297"},
+        {"label": "ACM Trans. Intell. Syst. Technol. 2024", "url": "https://doi.org/10.1145/3682065"},
+        {"label": "AAAI 2026", "url": "https://arxiv.org/abs/2409.04407"}
+      ]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-03-18",
+      "speaker": "Sadia Asif",
+      "title": "Optimization-driven Framework for Machine Unlearning",
+      "format": "paper talk, ICLR 2026",
+      "abstract": "Large language models deployed in sensitive applications increasingly require the ability to unlearn specific knowledge, such as user requests, copyrighted materials, or outdated information, without retraining from scratch to ensure regulatory compliance, user privacy, and safety. This task, known as machine unlearning, aims to remove the influence of targeted data (forgetting) while maintaining performance on the remaining data (retention). A common approach is to formulate this as a multi-objective problem and reduce it to a single-objective problem via scalarization, where forgetting and retention losses are combined using a weighted sum. However, this often results in unstable training dynamics and degraded model utility due to conflicting gradient directions. To address these challenges, we propose OFMU, a penalty-based bi-level optimization framework that explicitly prioritizes forgetting while preserving retention through a hierarchical structure. Our method enforces forgetting via an inner maximization step that incorporates a similarity-aware penalty to decorrelate the gradients of the forget and retention objectives and restores utility through an outer minimization step. To ensure scalability, we develop a two-loop algorithm with provable convergence guarantees under both convex and non-convex regimes. We further provide a rigorous theoretical analysis of convergence rates and show that our approach achieves better trade-offs between forgetting efficacy and model utility compared to prior methods.",
+      "short_abstract": "A bi-level optimization framework for machine unlearning that improves the forgetting-retention tradeoff and comes with convergence guarantees.",
+      "links": [{"label": "Paper", "url": "https://openreview.net/forum?id=ZDuyNJI56H"}]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-04-15",
+      "speaker": "Hoai-an Nguyen",
+      "title": "Numerical Linear Algebra in Linear Space",
+      "format": "paper talk, SODA 2026",
+      "abstract": "We present a randomized linear-space solver for general linear systems Ax = b where A and b are over the integers and without any assumption on the condition number of A. For matrices whose entries are bounded by poly(n), the solver returns a (1+epsilon)-multiplicative entry-wise approximation to rational vector x using O~(n^2 · nnz(A)) bit operations and O(n log n) bits of working space, where nnz denotes the number of nonzero entries. To our knowledge, this is the first linear-space linear system solver over the rationals that runs in O~(n^2 · nnz(A)) time. We also present several applications of our solver to numerical linear algebra problems, for which we provide algorithms with efficient polynomial running time and near-linear space. In particular, we present results for linear regression, linear programming, eigenvalues and eigenvectors, and singular value decomposition.",
+      "short_abstract": "A randomized linear-space solver for integer linear systems, with applications to regression, LP, and spectral problems.",
+      "links": [{"label": "Paper", "url": "https://arxiv.org/abs/2507.02433"}]
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-04-22",
+      "speaker": "Khai Dong",
+      "title": "Label Complexity of Linear Regression",
+      "format": "RQE talk",
+      "abstract": "Given a known system matrix X with n rows corresponding to experiments whose outputs y are costly to obtain, how can we selectively pay to observe only a fraction of the entries of y despite making no assumptions about y while ensuring that the resulting estimator incurs only a small multiplicative increase in error? This RQE talk will survey algorithms and guarantees for doing this efficiently in the worst case over y.",
+      "short_abstract": "A survey of label-efficient linear regression methods that minimize the number of expensive observations needed for a good estimator.",
+      "links": []
+    },
+    {
+      "semester": "Spring 2026",
+      "semester_slug": "spring-2026",
+      "date": "2026-04-29",
+      "speaker": "Xingjian Zhao",
+      "title": "WIN-U: Woodbury-Informed Newton-Unlearning as a retain-free Machine Unlearning Framework",
+      "format": "paper in submission",
+      "abstract": "Privacy concerns in LLMs have led to the rapidly growing need to enforce a data’s right to be forgotten. Machine unlearning addresses precisely this task, namely the removal of the influence of some specific data, i.e., the forget set, from a trained model. The gold standard for unlearning is to produce the model that would have been learned on only the rest of the training data, i.e., the retain set. Most existing unlearning methods rely on direct access to the retained data, which may not be practical due to privacy or cost constraints. We propose WIN-U, a retained-data free unlearning framework that requires only second order information for the originally trained model on the full data. The unlearning is performed using a single Newton-style step. Using the Woodbury matrix identity and a generalized Gauss-Newton approximation for the forget set curvature, the WIN-U update recovers the closed-form linear solution and serves as a local second-order approximation to the gold-standard retraining optimum. Extensive experiments on various vision and language benchmarks demonstrate that WIN-U achieves SOTA performance in terms of unlearning efficacy and utility preservation, while being more robust against relearning attacks compared to existing methods. Importantly, WIN-U does not require access to the retained data.",
+      "short_abstract": "A retain-free machine unlearning framework using a single Newton-style step and second-order information.",
+      "links": [{"label": "Preprint", "url": "https://arxiv.org/abs/2604.13438"}]
+    }
+  ]
+}
