@@ -105,13 +105,13 @@ def render_main(data: dict) -> str:
 
     rows = []
     for talk in current:
+        links = render_links(talk.get('links', []))
         rows.append(
             "<tr>"
             f"<td>{esc(compact_date(talk['date']))}</td>"
             f"<td>{esc(talk['speaker'])}</td>"
-            f"<td><strong>{esc(talk['title'])}</strong><br><span class='subtle'>{esc(talk['format'])}</span></td>"
-            f"<td>{esc(talk.get('short_abstract') or fallback_short_abstract(talk['abstract']))}</td>"
-            f"<td>{render_links(talk.get('links', []))}</td>"
+            f"<td><strong>{esc(talk['title'])}</strong><br><span class='subtle'>{esc(talk['format'])}</span><br><br><em>Abstract:</em> {esc(talk['abstract'])}{links}</td>"
+            f"<td><span class='tag'>{esc(talk.get('duration', '20m + Q&A'))}</span></td>"
             "</tr>"
         )
 
@@ -130,7 +130,6 @@ def render_main(data: dict) -> str:
           <a href="#schedule">schedule</a>
           <a href="#speakers">for speakers</a>
           <a href="#submit">submit talk</a>
-          <a href="mltheoryseminar_archive.html">archive</a>
         </nav>
       </header>
 
@@ -143,21 +142,13 @@ def render_main(data: dict) -> str:
         <li><strong>Scope:</strong> Present an upcoming/accepted conference paper; or a relevant paper selected by the advisor; or an RQE practice talk.</li>
       </ul>
 
-      <h2 id="schedule">Key facts</h2>
-      <div class="key-facts">
-        <div><strong>When</strong> {esc(site.get('day_time', 'Wednesdays'))}</div>
-        <div><strong>Where</strong> {esc(site.get('location', 'Sage 3713'))}</div>
-        <div><strong>Audience</strong> {esc(site.get('audience', 'Anyone with an interest in ML and CS Theory'))}</div>
-        <div><strong>Contact</strong> <a href="mailto:{esc(site.get('contact', 'gittea@rpi.edu'))}">{esc(site.get('contact', 'gittea@rpi.edu'))}</a></div>
-      </div>
+      <h2 id="schedule">Schedule, {esc(latest_semester)}</h2>
+      <p class="main-lead">Monitor this space for updates as the semester fills in.</p>
+      <p class="archive-note">View Fall 2025 talks <a href="mltheoryseminar_archive.html">&rarr;</a></p>
 
-      <h2>Schedule, {esc(latest_semester)}</h2>
-      <p>Monitor this space for updates as the semester fills in.</p>
-      <p><a href="mltheoryseminar_archive.html">View past talks →</a></p>
-
-      <table class="talk-table">
+      <table>
         <thead>
-          <tr><th>Date</th><th>Presenter</th><th>Title / Paper</th><th>Abstract</th><th>Links</th></tr>
+          <tr><th>Date</th><th>Presenter</th><th>Title / Paper</th><th>Format</th></tr>
         </thead>
         <tbody>
           {''.join(rows)}
@@ -176,7 +167,7 @@ def render_main(data: dict) -> str:
       <p>Use the template below to email the organizers.</p>
       <p><strong>Subject:</strong> ML+Theory Seminar Talk — <em>Lastname, Firstname</em></p>
       <p><strong>Body:</strong> Title · Format · Abstract · Links.</p>
-      <p><a href="mailto:{esc(site.get('contact', 'gittea@rpi.edu'))}?subject=ML%2BTheory%20Seminar%20Talk">Compose email →</a></p>
+      <p><a href="mailto:{esc(site.get('contact', 'gittea@rpi.edu'))}">Compose email &rarr;</a></p>
 
       <p class="subtle">© ML + Theory Seminar · {esc(site.get('organization', 'Rensselaer Polytechnic Institute'))}</p>
     </div>
