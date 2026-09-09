@@ -10,33 +10,42 @@
   "talks": [
     {
       "semester": "Fall 2026",
-      "date": "2026-09-09",
-      "speaker": "Mina Patel",
-      "title": "Geometry-Aware Pruning for Low-Rank Adaptation",
-      "format": "paper talk",
-      "abstract": "We study how low-rank adaptation can be combined with geometry-aware pruning to reduce parameter count without sacrificing downstream performance. The method identifies directions that contribute little to task-specific curvature, then removes or compresses them while preserving the low-rank update subspace. We analyze the effect of pruning on the effective rank of the adapted model, and show that the resulting update can be viewed as a structured projection in parameter space. In experiments on language and classification benchmarks, the method retains most of the quality of the unpruned adapter while substantially reducing memory footprint.",
-      "short_abstract": "A geometry-aware pruning method for low-rank adapters that reduces memory while preserving downstream quality.",
-      "links": []
-    },
-    {
-      "semester": "Fall 2026",
       "date": "2026-09-16",
-      "speaker": "Ethan Brooks",
-      "title": "Conformal Prediction under Structured Dependence",
-      "format": "paper talk",
-      "abstract": "Conformal prediction gives finite-sample coverage guarantees under exchangeability, but many practical settings exhibit structured dependence across samples. We consider a calibration scheme that adapts to blockwise and graph-based dependence patterns, yielding tighter prediction sets than naive aggregation. The key idea is to estimate a local conformity score within each dependency group and then combine the groups through a weighted quantile rule. This gives a practical tradeoff between coverage, set size, and computational cost. We discuss how the method behaves under misspecified dependence structure and identify regimes where the calibration remains stable even when group sizes vary substantially.",
-      "short_abstract": "A conformal prediction scheme that handles structured dependence by combining local calibration scores with a weighted quantile rule.",
-      "links": []
+      "speaker": "Jui Chien Lin",
+      "title": "SNAP-KG: Streaming Node Assignment via Projection for Knowledge Graph Entity Integration",
+      "format": "Practice talk for accepted paper",
+      "duration": "20m + Q&A",
+      "abstract": "Knowledge graph construction must continuously integrate new entities into a growing graph, but newly arriving entities have no connectivity and cannot be assigned to communities by transductive clustering methods without retraining. We propose SNAP-KG, a graph-structural multi-view clustering framework for streaming knowledge graph entities that learns a projector network to map each new entity from its raw features directly into the embedding space, enabling immediate cluster assignment without graph access or retraining. This inductive design supports continuous ingestion while preserving relational structure, and it can be used to scope downstream entity resolution and link prediction to a much smaller candidate set. Experiments on five benchmark multi-view graph datasets and a production-scale KG with 2.4 million nodes show order-of-magnitude inference speedups over retraining-based methods and competitive clustering quality, with 62-75% candidate search reduction for downstream tasks.",
+      "short_abstract": "An inductive multi-view KG clustering framework for streaming entities that speeds up cluster assignment and candidate scoping.",
+      "links": [
+        {"label": "Paper", "url": "https://arxiv.org/abs/2608.25149"}
+      ]
     },
     {
       "semester": "Fall 2026",
-      "date": "2026-09-23",
-      "speaker": "Lina Chen",
-      "title": "Subquadratic Verification of Sparse Linear Dynamical Systems",
-      "format": "practice talk",
-      "abstract": "We present a verification pipeline for sparse linear dynamical systems that exploits sparsity to reduce the cost of safety checking. Instead of constructing a dense global transition model, we work with local sparse neighborhoods and propagate reachable sets through a compressed representation. The result is a subquadratic verification procedure for systems whose effective interaction graph has low degree. We provide a proof sketch of soundness, explain the role of sparsity in the runtime bound, and show how the same framework can be adapted to settings with bounded model uncertainty and time-varying inputs.",
-      "short_abstract": "A sparse verification pipeline for linear dynamical systems that keeps soundness while reducing the cost of reachability checking.",
-      "links": []
+      "date": "2026-10-07",
+      "speaker": "Md Saikat Islam Khan Bappy",
+      "title": "FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs",
+      "format": "Practice talk for accepted ISWC 2026 paper",
+      "duration": "30-40m + Q&A",
+      "abstract": "Knowledge graph question answering often spans organizations that cannot share raw data because of governance and data sovereignty constraints. We propose FedV-KGQA, a framework for multi-hop reasoning over vertically partitioned knowledge graphs in which organizations share entities but keep disjoint sets of relations. The method combines local graph enrichment, knowledge graph embeddings, and a topic entity anchoring mechanism so raw triples and relation parameters never leave a silo and no runtime inter-silo communication is needed. Across three benchmarks and 12 model configurations, FedV-KGQA stays close to centralized performance, generalizes to 3-hop reasoning, and remains robust to embedding perturbations.",
+      "short_abstract": "A federated multi-hop KGQA framework for vertically partitioned knowledge graphs that preserves silo boundaries and stays close to centralized performance.",
+      "links": [
+        {"label": "Paper", "url": "https://arxiv.org/abs/2608.24846"}
+      ]
+    },
+    {
+      "semester": "Fall 2026",
+      "date": "2026-10-14",
+      "speaker": "Maruf Ahmed Mridul",
+      "title": "GrOIL: Graph-Grounded Domain Ontology Induction with Constrained LLM Mediation",
+      "format": "Practice talk for accepted CIKM 2026 paper",
+      "duration": "~20m + Q&A",
+      "abstract": "Constructing formal ontologies from domain documents requires corpus grounding, vocabulary consistency, axiom-level expressivity, and end-to-end provenance. We present a seven-stage graph-grounded pipeline that converts domain documents into a complete, auditable OWL Terminological Box (TBox) without any unconstrained generation step. Documents are first encoded as Unified Discourse-Hypergraphs (UDH) that capture entity participation and discourse dependencies, and later stages transform this evidence into a class hierarchy, typed object and datatype properties, and restriction axioms while limiting LLM use to narrow, graph-grounded mediation tasks. A paired Assertional Box (ABox) population procedure grounds named individuals and enables SPARQL-based functional evaluation. On the life insurance domain, using two established benchmarks and a new 100-contract corpus spanning ten product types, the pipeline outperforms direct and multi-agent LLM baselines on competency-question coverage, keyphrase coverage, and structured gap-and-overlap reasoning while requiring no manual TBox engineering.",
+      "short_abstract": "A graph-grounded ontology induction pipeline that builds auditable OWL TBoxes from domain documents with constrained LLM mediation.",
+      "links": [
+        {"label": "Paper", "url": "https://arxiv.org/abs/2608.22135"}
+      ]
     },
     {
       "semester": "Spring 2026",
