@@ -27,7 +27,7 @@
       "speaker": "Md Saikat Islam Khan Bappy",
       "title": "FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs",
       "format": "Practice talk for accepted ISWC 2026 paper",
-      "duration": "30-40m + Q&A",
+      "duration": "~20m + Q&A",
       "abstract": "Knowledge graph question answering often spans organizations that cannot share raw data because of governance and data sovereignty constraints. We propose FedV-KGQA, a framework for multi-hop reasoning over vertically partitioned knowledge graphs in which organizations share entities but keep disjoint sets of relations. The method combines local graph enrichment, knowledge graph embeddings, and a topic entity anchoring mechanism so raw triples and relation parameters never leave a silo and no runtime inter-silo communication is needed. Across three benchmarks and 12 model configurations, FedV-KGQA stays close to centralized performance, generalizes to 3-hop reasoning, and remains robust to embedding perturbations.",
       "short_abstract": "A federated multi-hop KGQA framework for vertically partitioned knowledge graphs that preserves silo boundaries and stays close to centralized performance.",
       "links": [
