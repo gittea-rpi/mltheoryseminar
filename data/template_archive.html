@@ -15,6 +15,28 @@
   </script>
 </head>
 <body>
-  {{BODY}}
+  <main role="main">
+    <div class="container">
+      <header>
+        <div class="page-title-row">
+          <img class="seminar-logo" src="{{LOGO_SRC}}" alt="ML + Theory Seminar logo">
+          <div class="header-title-text">
+            <h1>ML + Theory Seminar</h1>
+            <h2>Rensselaer Polytechnic Institute</h2>
+          </div>
+        </div>
+        <nav role="navigation" class="top-nav">
+          <a href="mltheoryseminar.html">current talks</a>
+        </nav>
+      </header>
+
+      <h2 id="top">Archive</h2>
+      <p>Explore past semesters of this seminar series: research talks, works in progress, practice talks, and ideas from across machine learning, theory, optimization, statistics, and neighboring areas.</p>
+      <div class="archive-jumpbar">{{SEMESTER_JUMPS}}</div>
+      {{ARCHIVE_BLOCKS}}
+
+      <p class="subtle">© ML + Theory Seminar · Rensselaer Polytechnic Institute</p>
+    </div>
+  </main>
 </body>
 </html>

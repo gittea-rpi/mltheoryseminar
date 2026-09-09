@@ -15,6 +15,77 @@
   </script>
 </head>
 <body>
-  {{BODY}}
+  <main role="main">
+    <div class="container">
+      <header>
+        <div class="page-title-row">
+          <img class="seminar-logo" src="{{LOGO_SRC}}" alt="ML + Theory Seminar logo">
+          <div class="header-title-text">
+            <h1>ML + Theory Seminar</h1>
+            <h2>Rensselaer Polytechnic Institute</h2>
+          </div>
+        </div>
+        <nav role="navigation" class="top-nav">
+          <a href="#about">about</a>
+          <a href="#talks">upcoming talks</a>
+          <a href="#speakers">giving a talk</a>
+          <a href="mltheoryseminar_archive.html">archived talks</a>
+        </nav>
+      </header>
+
+      <h2 id="about">About the seminar</h2>
+      <div class="about-layout">
+        <div class="about-text">
+          <p class="main-lead">The ML + Theory Seminar is a place to share new research, test ideas in front of a broad technical audience, and see what people across RPI are working on. Talks span machine learning and adjacent areas of theoretical computer science, with an emphasis on work that can spark useful questions across research groups.</p>
+
+          <p class="about-copy">We welcome both research talks and practice talks for upcoming conference presentations, RQEs, and candidacies. The goal is not just to present finished results, but to give speakers a useful audience and to make it easier for the department to learn from work happening outside their immediate sub-area.</p>
+        </div>
+
+        <aside class="seminar-facts" aria-labelledby="seminar-details-title">
+          <h3 id="seminar-details-title">Seminar details</h3>
+          <dl>
+            <div>
+              <dt>When</dt>
+              <dd>Wednesdays<br>11:00–11:50 a.m. ET</dd>
+            </div>
+            <div>
+              <dt>Where</dt>
+              <dd>Troy 2015</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <p class="archive-note">Curious what we have covered before? <a href="mltheoryseminar_archive.html">Browse archived talks &rarr;</a></p>
+
+      <h2 id="talks">{{CURRENT_SEMESTER}} talks</h2>
+      <p class="main-lead">{{CURRENT_SEMESTER}} talks are listed below. New talks will be added as the semester develops, so check back for additions and schedule changes.</p>
+
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Presenter</th><th>Title / Paper</th><th>Format</th></tr>
+        </thead>
+        <tbody>
+          {{TALK_ROWS}}
+        </tbody>
+      </table>
+
+      <h2 id="speakers">Giving a talk</h2>
+      <p class="main-lead">The seminar is meant to be useful to speakers, not just to the audience. Bring a polished research talk, rehearse something you will soon present elsewhere, or use the room to practice explaining your work to researchers outside your immediate area.</p>
+      <ul>
+        <li><strong>Length:</strong> Talks are typically 20–40 minutes, followed by discussion and questions.</li>
+        <li><strong>What to present:</strong> An accepted or upcoming conference paper, an advisor-recommended paper you want to teach to the group, or a practice talk for an RQE or candidacy all fit well.</li>
+        <li><strong>How to pitch it:</strong> Assume a mathematically mature audience, but not an audience of specialists in your exact topic. Motivate the problem and make the main ideas legible before diving into technical detail.</li>
+        <li><strong>Questions:</strong> Expect questions from people outside your sub-area. That cross-area feedback is an important part of the seminar.</li>
+      </ul>
+
+      <p class="main-lead">Have something you would like to present? Send the organizers a short note with the information below. You do not need to have a finished abstract before getting in touch.</p>
+      <p><strong>Subject:</strong> ML+Theory Seminar Talk — <em>Lastname, Firstname</em></p>
+      <p><strong>Include:</strong> a tentative title, the talk format, a short abstract or description, and any relevant paper or project links.</p>
+      <p><a href="mailto:gittea@rpi.edu">Email the organizers &rarr;</a></p>
+
+      <p class="subtle">© ML + Theory Seminar · Rensselaer Polytechnic Institute</p>
+    </div>
+  </main>
 </body>
 </html>
